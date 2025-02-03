@@ -36,6 +36,12 @@ export const Register = () => {
                             <label className="mb-2 block text-sm font-semibold">Dirección</label>
                             <input type="text" placeholder="Ingresa tu dirección de domicilio" className="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" />
                         </div>
+                        
+                        {/* Campo para celular */}
+                        <div className="mb-3">
+                            <label className="mb-2 block text-sm font-semibold">Celular</label>
+                            <input type="number" placeholder="Ingresa tu celular" className="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" />
+                        </div>
 
                         {/* Campo para correo electrónico */}
                         <div className="mb-3">
@@ -78,9 +84,6 @@ export const Register = () => {
                         </div>
 
                     </form>
-
-                    {/* Línea separadora */}
-                    <div className="mt-5 text-xs border-b-2 py-4"></div>
 
                     {/* Enlace para iniciar sesión si ya tiene una cuenta */}
                     <div className="mt-3 text-sm flex justify-between items-center">
