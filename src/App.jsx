@@ -13,7 +13,7 @@ import Details from './pages/Details'
 import Create from './pages/Create'
 import Update from './pages/Update'
 import Chat from './pages/Chat'
-
+import Reset from './pages/Reset'
 
 
 
@@ -28,6 +28,7 @@ function App() {
         <Route path='register' element={<Register/>}/>
         <Route path='forgot/:id' element={<Forgot/>}/>
         <Route path='confirm/:token' element={<Confirm/>}/>
+        <Route path='reset/:token' element={<Reset/>}/>
         <Route path='*' element={<NotFound />} />
 
 
