@@ -1,156 +1,205 @@
 import logoDarkMode from '../assets/dark.png'
-import logoFacebook from '../assets/facebook.png'
-import logoGithub from '../assets/github.png'
-import logoLinkedind from '../assets/linkedin.png'
+import logoDogCatMain from '../assets/dogmain.png'
+import AppStoreImage from '../assets/appstore.png'
+import GooglePlayImage from '../assets/googleplay.png'
 import logoDog from '../assets/dog-hand.webp'
-import logoCode from '../assets/code.png'
-import logoConsulting from '../assets/consulting.png'
-import logoDogLost from '../assets/doglost.jpg'
-import logoWeb1 from '../assets/web1.png'
-import logoWeb2 from '../assets/web2.png'
-import logoWeb3 from '../assets/web3.png'
-import logoWeb4 from '../assets/web4.png'
-import logoWeb5 from '../assets/web5.png'
-import logoWeb6 from '../assets/web6.png'
-import { useState } from 'react'
 import { Link } from 'react-router'
-
+import { MdDashboard } from "react-icons/md";
+import { FaRobot } from "react-icons/fa";
+import { BsCashCoin } from "react-icons/bs";
+import { FaCommentSms } from "react-icons/fa6";
+import { TbDog } from "react-icons/tb";
+import { FaUserDoctor } from "react-icons/fa6";
+import { GiMedicines } from "react-icons/gi";
+import { FaFacebook } from "react-icons/fa";
+import { FaSquareInstagram } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 
 
 export const Home = () => {
-    const [darkMode, setdarkMode] = useState(false)
-
     return (
-        <div className={darkMode ? "dark" : ""}>
+        <>
+            <header className="container mx-auto h-40 text-center py-4 md:flex justify-between items-center px-4 md:h-15">
+                <h1 className='font-bold text-2xl my-2 text-amber-700'>Smart<span className='text-black'>VET</span></h1>
+                <ul className='flex gap-5 justify-center my-4 flex-wrap'>
+                    <li><a href="#" className='font-bold hover:text-amber-700 hover:underline'>Home</a></li>
+                    <li><a href="#" className='font-bold hover:text-amber-700 hover:underline'>About US</a></li>
+                    <li><a href="#" className='font-bold hover:text-amber-700 hover:underline'>Services</a></li>                    <li><a href="#" className='font-bold hover:text-amber-700 hover:underline'>Contact</a></li>
+                </ul>
+                <ul className='flex justify-center items-center gap-5 my-4'>
+                    <li><img src={logoDarkMode} alt="logo" width={35} height={35} />
+                    </li>
+                </ul>
+            </header>
 
-            <main className='bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-800'>
-                <section>
-                    <nav className='p-10 mb-12 flex justify-between'>
-                        <h1 className='text-2xl font-bold dark:text-white'>SmartVet</h1>
-                        <ul className='flex items-center'>
-                            <li><img onClick={() => setdarkMode(!darkMode)} className='cursor-pointer' src={logoDarkMode} alt="logo" width={40} height={40} /></li>
-                            <li><Link to="/login" className='bg-gray-600 text-slate-400 px-6 py-2 rounded-full ml-8 hover:bg-gray-900 hover:text-white' href="#">Login</Link></li>
-                        </ul>
-                    </nav>
 
-                    <div className='text-center'>
-                        <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl'>Sistema inteligente </h2>
-                        <h3 className='text-2xl py-2 md:text-3xl dark:text-white'>para la gestión de mascotas</h3>
-                        <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel vero dolore pariatur asperiores voluptatibus sunt optio iste atque animi id odio aliquid sapiente voluptatem, accusantium, ea sed quibusdam a. Itaque.</p>
+
+            <main className='text-center py-6 px-8 bg-red-50  md:text-left md:flex justify-between items-center gap-10 md:py-1'>
+                <div className=''>
+                    <h1 className='font-lato font-extrabold text-amber-800 uppercase text-4xl my-4 md:text-6xl'>Intelligent software</h1>
+
+                    <p className='font-bold text-left my-8 md:text-2xl underline'>Powered by</p>
+
+                    <p className='text-2xl my-6 font-sans'>Artificial intelligence, Payment gateway, Realtime chat and much more...</p>
+
+                    <Link to="/login" href="#" className='block bg-amber-800 w-40 py-2 mx-auto text-white rounded-2xl text-center sm:mx-0 hover:bg-amber-700'>Get started</Link>
+
+                    <p className='font-bold text-left my-4 md:text-2xl'>Find us</p>
+
+                    <div className="flex justify-center gap-4">
+                        <a href="#">
+                            <img src={AppStoreImage} alt="App Store" />
+                        </a>
+                        <a href="#">
+                            <img src={GooglePlayImage} alt="Google Play" />
+                        </a>
                     </div>
-
-                    <div className='text-5xl flex justify-center gap-16 py-3'>
-                        <img src={logoFacebook} alt="logo-redes" width={50} height={50} className={'dark:border-2 border-teal-300 rounded-full'} />
-
-                        <img src={logoGithub} alt="logo-redes" width={50} height={50} className={'dark:border-2 border-teal-300 rounded-full'} />
-
-                        <img src={logoLinkedind} alt="logo-redes" width={50} height={50} className={'dark:border-2 border-teal-300 rounded-full'} />
-                    </div>
-
-                    <div className='relative mx-auto rounded-full w-80 h-80 mt-12 overflow-hidden md:w-96 md:h-96 border-4 border-teal-600 dark:border-teal-500 '>
-                        <img src={logoDog} alt="logo-rocket" className='w-full h-full object-cover dark:bg-slate-300' />
-                    </div>
-
-
-                </section>
-
-                <section>
-                    <div>
-                        <h3 className='text-3xl py-1 dark:text-white'>Services offered</h3>
-                        <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, delectus iure <span className='text-teal-500'>quibusdam</span> quas quaerat itaque, est minima ducimus recusandae illo ipsam numquam nam earum libero <span className='text-teal-500'>deleniti</span> voluptatem! Autem, veniam ut.</p>
-                        <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, delectus iure <span className='text-teal-500'>quibusdam</span> quas quaerat itaque, est minima ducimus recusandae illo ipsam numquam nam earum libero <span className='text-teal-500'>deleniti</span> voluptatem! Autem, veniam ut.</p>
-                    </div>
-
-                    <div className='md:flex md:flex-wrap lg:flex lg:justify-center gap-5'>
-                        <div className='text-center shadow-2xl p-10 rounded-xl my-10 md:w-72 lg:w-80 dark:bg-slate-200'>
-                            <img className='mx-auto' src={logoDogLost} alt="" />
-                            <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
-                            <p className='py-4 text-teal-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias repudiandae aliquid dolores officiis neque.</p>
-                            <Link to="/" className='bg-gray-600 text-slate-400 px-6 py-2 rounded-full ml-8 hover:bg-gray-900 hover:text-white' href="#">Más información</Link>
-                        </div>
-                        <div className='text-center shadow-2xl p-10 rounded-xl my-10 md:w-72 lg:w-80 dark:bg-slate-200'>
-                            <img className='mx-auto' src={logoCode} alt="" />
-                            <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
-                            <p className='py-4 text-teal-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias repudiandae aliquid dolores officiis neque.</p>
-                            <Link to="/" className='bg-gray-600 text-slate-400 px-6 py-2 rounded-full ml-8 hover:bg-gray-900 hover:text-white' href="#">Más información</Link>
-                        </div>
-                        <div className='text-center shadow-2xl p-10 rounded-xl my-10 md:w-72 lg:w-80 dark:bg-slate-200'>
-                            <img className='mx-auto' src={logoDogLost} alt="" />
-                            <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
-                            <p className='py-4 text-teal-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias repudiandae aliquid dolores officiis neque.</p>
-                            <Link to="/" className='bg-gray-600 text-slate-400 px-6 py-2 rounded-full ml-8 hover:bg-gray-900 hover:text-white' href="#">Más información</Link>
-                        </div>
-                        <div className='text-center shadow-2xl p-10 rounded-xl my-10 md:w-72 lg:w-80 dark:bg-slate-200'>
-                            <img className='mx-auto' src={logoDogLost} alt="" />
-                            <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
-                            <p className='py-4 text-teal-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias repudiandae aliquid dolores officiis neque.</p>
-                            <Link to="/" className='bg-gray-600 text-slate-400 px-6 py-2 rounded-full ml-8 hover:bg-gray-900 hover:text-white' href="#">Más información</Link>
-                        </div>
-                        <div className='text-center shadow-2xl p-10 rounded-xl my-10 md:w-72 lg:w-80 dark:bg-slate-200'>
-                            <img className='mx-auto' src={logoConsulting} alt="" />
-                            <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
-                            <p className='py-4 text-teal-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias repudiandae aliquid dolores officiis neque.</p>
-                            <Link to="/" className='bg-gray-600 text-slate-400 px-6 py-2 rounded-full ml-8 hover:bg-gray-900 hover:text-white' href="#">Más información</Link>
-                        </div>
-                        <div className='text-center shadow-2xl p-10 rounded-xl my-10 md:w-72 lg:w-80 dark:bg-slate-200'>
-                            <img className='mx-auto' src={logoCode} alt="" />
-                            <h3 className='text-lg font-medium pt-8 pb-2'>Beautiful Designs</h3>
-                            <p className='py-4 text-teal-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias repudiandae aliquid dolores officiis neque.</p>
-                            <Link to="/" className='bg-gray-600 text-slate-400 px-6 py-2 rounded-full ml-8 hover:bg-gray-900 hover:text-white' href="#">Más información</Link>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <div>
-                        <h3 className='text-3xl py-1 dark:text-white'>Proyects</h3>
-                        <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, delectus iure <span className='text-teal-500'>quibusdam</span> quas quaerat itaque, est minima ducimus recusandae illo ipsam numquam nam earum libero <span className='text-teal-500'>deleniti</span> voluptatem! Autem, veniam ut.</p>
-                        <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, delectus iure <span className='text-teal-500'>quibusdam</span> quas quaerat itaque, est minima ducimus recusandae illo ipsam numquam nam earum libero <span className='text-teal-500'>deleniti</span> voluptatem! Autem, veniam ut.</p>
-                    </div>
-
-
-                    <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-                        <div className="basis-1/3 flex-1 ">
-                            <img
-                                className="rounded-lg object-cover"
-                                src={logoWeb1}
-                            />
-                        </div>
-                        <div className="basis-1/3 flex-1">
-                            <img
-                                className="rounded-lg object-cover"
-                                src={logoWeb2}
-                            />
-                        </div>
-                        <div className="basis-1/3 flex-1">
-                            <img
-                                className="rounded-lg object-fill"
-                                src={logoWeb4}
-                            />
-                        </div>
-                        <div className="basis-1/3 flex-1">
-                            <img
-                                className="rounded-lg object-cover"
-                                src={logoWeb6}
-                            />
-                        </div>
-                        <div className="basis-1/3 flex-1">
-                            <img
-                                className="rounded-lg object-cover"
-                                src={logoWeb5}
-                            />
-                        </div>
-                        <div className="basis-1/3 flex-1 lg:bg-orange-100">
-                            <img
-                                className="rounded-lg object-cover "
-                                src={logoWeb3}
-                            />
-                        </div>
-                    </div>
-                </section>
-
+                </div>
+                <div className='hidden md:block'>
+                    <img src={logoDogCatMain} alt="smart" />
+                </div>
             </main>
 
-        </div>
+
+            <section className='container mx-auto px-4'>
+
+                <div className='container mx-auto relative mt-6'>
+                    <h2 className='font-semibold text-3xl relative z-1 w-50 text-center mx-auto bg-white'>ABOUT US</h2>
+                    <div className='text-amber-900 border-2 absolute top-1/2 w-full z-0' />
+                </div>
+
+                <div className='my-10 flex flex-col gap-10 items-center sm:flex-row sm:justify-around sm:items-center'>
+
+                    <div className='sm:w-1/2'>
+                        <img src={logoDog} alt="App Store" className='w-full h-full object-cover' />
+                    </div>
+
+                    <div className='px-10 sm:w-1/2'>
+                        <p className='my-4'>SmartVET is the first software on the market that includes
+                        </p>
+                        <ul className='space-y-4'>
+                            <li>
+                                <MdDashboard className='inline text-2xl mr-2' />Administrative Dashboard
+                            </li>
+                            <li>
+                                <FaRobot className='inline text-2xl mr-2' />
+                                Artificial intelligence
+                            </li>
+                            <li>
+                                <BsCashCoin className='inline text-2xl mr-2' />
+                                Payment gateway
+                            </li>
+                            <li>
+                                <FaCommentSms className='inline text-2xl mr-2' />
+                                Realtime chat
+                            </li>
+                            <li>
+                                <TbDog className='inline text-2xl mr-2' />
+                                Management Patients
+                            </li>
+                            <li>
+                                <FaUserDoctor className='inline text-2xl mr-2' />
+                                Management Veterinarians
+                            </li>
+                            <li>
+                                <GiMedicines className='inline text-2xl mr-2' />
+                                Management Treatments
+                            </li>
+                        </ul>
+                        <p className='my-4'>And other features that leverage the modern technologies</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section className='container mx-auto px-4'>
+
+                <div className='container mx-auto relative mt-6'>
+                    <h2 className='font-semibold text-3xl relative z-1 w-50 text-center mx-auto bg-white'>SERVICES</h2>
+                    <div className='text-amber-900 border-2 absolute top-1/2 w-full z-0' />
+                </div>
+
+                <div className='my-10 flex justify-between flex-wrap gap-5'>
+
+                    <div className="text-center shadow-[0.1rem_0.1rem_1rem_rgba(0,0,0,0.3)] hover:shadow-[0.1rem_0.1rem_1rem_rgba(0,0,0,0.5)] transition-shadow duration-300 relative pt-4 sm:flex-1">
+                        <FaUserDoctor className='inline text-5xl' />
+                        <h4 className="text-xl font-bold py-4 text-amber-700 hover:underline">Management Veterinarians</h4>
+                        <p className="my-4 px-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+                            similique sint eius consectetur rerum voluptate rem tenetur quisquam veniam quos ad facilis alias
+                            necessitatibus.</p>
+                        <hr className="border-1 border-amber-900 absolute w-full" />
+                    </div>
+
+
+                    <div className="text-center shadow-[0.1rem_0.1rem_1rem_rgba(0,0,0,0.3)] hover:shadow-[0.1rem_0.1rem_1rem_rgba(0,0,0,0.5)] transition-shadow duration-300 relative pt-4 bg-red-50 sm:flex-1">
+                        <TbDog className='inline text-5xl' />
+                        <h4 className="text-xl font-bold py-4 text-amber-700 hover:underline">Management Patients</h4>
+                        <p className="my-4 px-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+                            similique sint eius consectetur rerum voluptate rem tenetur quisquam veniam quos ad facilis alias
+                            necessitatibus.</p>
+                        <hr className="border-1 border-amber-900 absolute w-full" />
+                    </div>
+
+                    <div className="text-center shadow-[0.1rem_0.1rem_1rem_rgba(0,0,0,0.3)] hover:shadow-[0.1rem_0.1rem_1rem_rgba(0,0,0,0.5)] transition-shadow duration-300 relative pt-4 bg-red-50 sm:flex-1">
+                        <GiMedicines className='inline text-5xl' />
+                        <h4 className="text-xl font-bold py-4 text-amber-700 hover:underline">Management Treatments</h4>
+                        <p className="my-4 px-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+                            similique sint eius consectetur rerum voluptate rem tenetur quisquam veniam quos ad facilis alias
+                            necessitatibus.</p>
+                        <hr className="border-1 border-amber-900 absolute w-full" />
+                    </div>
+
+                    <div className="text-center shadow-[0.1rem_0.1rem_1rem_rgba(0,0,0,0.3)] hover:shadow-[0.1rem_0.1rem_1rem_rgba(0,0,0,0.5)] transition-shadow duration-300 relative pt-4 sm:flex-1">
+                        <FaCommentSms className='inline text-5xl' />
+                        <h4 className="text-xl font-bold py-4 text-amber-700 hover:underline">Realtime Chat</h4>
+                        <p className="my-4 px-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+                            similique sint eius consectetur rerum voluptate rem tenetur quisquam veniam quos ad facilis alias
+                            necessitatibus.</p>
+                        <hr className="border-1 border-amber-900 absolute w-full" />
+                    </div>
+                </div>
+            </section>
+
+
+            <footer className='text-center bg-red-50 p-6 sm:px-20 sm:py-10 mt-20 rounded-tr-3xl rounded-tl-3xl space-y-8'>
+
+                <div className='flex justify-between items-center'>
+                    <div className='text-3xl font-extrabold text-amber-800'>Contact US</div>
+                    <ul className='flex gap-4'>
+                        <li><FaFacebook className='text-2xl' /></li>
+                        <li><FaSquareInstagram className='text-2xl' /></li>
+                        <li><FaXTwitter className='text-2xl' /></li>
+                    </ul>
+                </div>
+
+                <div className='flex justify-between items-center'>
+                    <div className='text-left'>
+                        <p className='font-bold my-2'>Email: admin@vet.com</p>
+                        <p className='font-bold'>Phone: 0995644186</p>
+                    </div>
+                    <div className='flex-1 sm:max-w-1/2'>
+                        <form action="#" className='w-full p-4'>
+                            <fieldset className='border-2 border-amber-900 p-4 rounded-sm '>
+                                <legend className='bg-amber-950 w-full text-left text-white pl-2 py-2'>Subcribe our newsletter</legend>
+                                <div className='flex justify-between gap-4'>
+                                    <input type="email" placeholder="Enter your email" className='sm:flex-1 border border-gray-300 rounded-md focus:outline-none px-2' />
+                                    <button className='flex-1 sm:max-w-40 border bg-amber-950 p-1 rounded-lg text-white'>Send</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                <hr className='border-1 border-amber-800' />
+
+                <p className='font-semibold'>
+                    copyright - © - BYRONTOSH
+                </p>
+            </footer>
+
+        </>
     )
 }
+

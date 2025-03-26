@@ -5,33 +5,31 @@ const Table = () => {
         <table className="w-full mt-5 table-auto shadow-lg bg-white">
             <thead className="bg-gray-800 text-slate-400">
                 <tr>
-                    <th className="p-2">Nombre</th>
-                    <th className="p-2">Nombre</th>
-                    <th className="p-2">Nombre</th>
-                    <th className="p-2">Nombre</th>
-                    <th className="p-2">Nombre</th>
-                    <th className="p-2">Nombre</th>
-                    <th className="p-2">Acciones</th>
+                    {["N°", "Nombre mascota", "Nombre propietario", "Email", "Celular", "Estado", "Acciones"].map((header) => (
+                        <th key={header} className="p-2">{header}</th>
+                    ))}
                 </tr>
             </thead>
             <tbody>
                 <tr className="hover:bg-gray-300 text-center">
-                    <td>nombre</td>
-                    <td>nombre</td>
-                    <td>nombre</td>
-                    <td>nombre</td>
-                    <td>nombre</td>
-                    <td>nombre</td>
+                    <td>1</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
                     <td className="py-2 text-center">
+                        <MdInfo 
+                            title="Más información" 
+                            className="h-7 w-7 text-slate-800 cursor-pointer inline-block mr-2 hover:text-green-600"
+                        />
+
+                        
                         <MdPublishedWithChanges 
                             title="Actualizar" 
                             className="h-7 w-7 text-slate-800 cursor-pointer inline-block mr-2 hover:text-blue-600"
                         />
                         
-                        <MdInfo 
-                            title="Más información" 
-                            className="h-7 w-7 text-slate-800 cursor-pointer inline-block mr-2 hover:text-green-600"
-                        />
                         
                         <MdDeleteForever 
                             title="Eliminar" 
