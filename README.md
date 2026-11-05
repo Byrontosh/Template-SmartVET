@@ -1,8 +1,7 @@
-# React + Vite
+# Smartvet - Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img width="1920" height="2067" alt="image" src="https://github.com/user-attachments/assets/08a34d44-5f90-4107-8807-e3a7c3a3dc92" />
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img width="1920" height="1105" alt="image" src="https://github.com/user-attachments/assets/047dab4f-c295-47aa-8127-2488318b75ee" />
+
