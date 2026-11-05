@@ -14,6 +14,7 @@ import Create from './pages/Create'
 import Update from './pages/Update'
 import Chat from './pages/Chat'
 import Reset from './pages/Reset'
+import Panel from './pages/Panel'
 
 
 
@@ -33,11 +34,12 @@ function App() {
 
 
         <Route path='/dashboard' element={<Dashboard/>}>
-          <Route index element={<Profile/>}/>
-          <Route path='listar' element={<List/>}/>
-          <Route path='visualizar/:id' element={<Details/>}/>
-          <Route path='crear' element={<Create/>}/>
-          <Route path='actualizar/:id' element={<Update/>}/>
+          <Route index element={<Panel/>}/>
+          <Route path='profile' element={<Profile/>}/>
+          <Route path='list' element={<List/>}/>
+          <Route path='details/:id' element={<Details/>}/>
+          <Route path='create' element={<Create/>}/>
+          <Route path='update/:id' element={<Update/>}/>
           <Route path='chat' element={<Chat/>}/>
 
         </Route>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react"
 
 
 export const Form = () => {
@@ -12,14 +12,15 @@ export const Form = () => {
     const [selectedOption , setSelectedOption ] = useState("ia")
 
 
-    
 
     return (
+
         <form>
             
 
             {/* Información del propietario */}
             <fieldset className="border-2 border-gray-500 p-6 rounded-lg shadow-lg">
+
                 <legend className="text-xl font-bold text-gray-700 bg-gray-200 px-4 py-1 rounded-md">
                     Información del propietario
                 </legend>
@@ -30,18 +31,20 @@ export const Form = () => {
                     <div className="flex items-center gap-10 mb-5">
                         <input
                             type="number"
+                            inputMode="numeric"
                             placeholder="Ingresa la cédula"
                             className="block w-full rounded-md border border-gray-300 py-1 px-2 text-gray-500"
                         />
-                        <button className="py-1 px-8 bg-gray-600 text-slate-300 border rounded-xl hover:scale-110 duration-300 hover:bg-gray-900 hover:text-white sm:w-80"
-                        
-                        >
+                        <button className="py-1 px-8 bg-gray-600 text-slate-300 border rounded-xl hover:scale-110 
+                        duration-300 hover:bg-gray-900 hover:text-white sm:w-80">
                             Consultar
                         </button>
                     </div>
                 </div>
 
-                {/* Nombre completo */}
+
+
+                {/* Campo nombres completos */}
                 <div>
                     <label className="mb-2 block text-sm font-semibold">Nombres completos</label>
                     <input
@@ -51,7 +54,8 @@ export const Form = () => {
                     />
                 </div>
 
-                {/* Correo electrónico */}
+
+                {/* Campo correo electrónico */}
                 <div>
                     <label className="mb-2 block text-sm font-semibold">Correo electrónico</label>
                     <input
@@ -61,24 +65,32 @@ export const Form = () => {
                     />
                 </div>
 
-                {/* Celular */}
+
+                {/* Campo celular */}
                 <div>
                     <label className="mb-2 block text-sm font-semibold">Celular</label>
                     <input
-                        type="number"
+                        type="text"
+                        inputMode="tel"
                         placeholder="Ingresa el celular"
                         className="block w-full rounded-md border border-gray-300 py-1 px-2 text-gray-500 mb-5"
                     />
                 </div>
+
             </fieldset>
 
-            {/* Información de la mascota */}
+
+
+            {/* Información del paciente */}
+
             <fieldset className="border-2 border-gray-500 p-6 rounded-lg shadow-lg mt-10">
+
                 <legend className="text-xl font-bold text-gray-700 bg-gray-200 px-4 py-1 rounded-md">
                     Información de la mascota
                 </legend>
 
-                {/* Nombre de la mascota */}
+
+                {/* Campo nombre de la mascota */}
                 <div>
                     <label className="mb-2 block text-sm font-semibold">Nombre</label>
                     <input
@@ -88,8 +100,10 @@ export const Form = () => {
                     />
                 </div>
 
-                {/* Imagen de la mascota*/}
+
+                {/* Campo imagen de la mascota*/}
                 <label className="mb-2 block text-sm font-semibold">Imagen de la mascota</label>
+                
                 <div className="flex gap-4 mb-2">
                     {/* Opción: Imagen con IA */}
                     <label className="flex items-center gap-2">
@@ -110,7 +124,8 @@ export const Form = () => {
                     </label>
                 </div>
 
-                {/* Imagen con IA */}
+
+                {/* Campo imagen con IA */}
                 {selectedOption === "ia" && (
                     <div className="mt-5">
                         <label className="mb-2 block text-sm font-semibold">Imagen con IA</label>
@@ -136,57 +151,69 @@ export const Form = () => {
                     </div>
                 )}
 
-                {/* Subir Imagen */}
+
+                {/* Campo subir imagen */}
                 {selectedOption === "upload" && (
                     <div className="mt-5">
                         <label className="mb-2 block text-sm font-semibold">Subir Imagen</label>
                         <input
                             type="file"
+                            accept="image/*"
                             className="block w-full rounded-md border border-gray-300 py-1 px-2 text-gray-500 mb-5"
                         />
                     </div>
                 )}
 
-                {/* Tipo de mascota */}
-                <div>
-                    <label className="mb-2 block text-sm font-semibold">Tipo</label>
-                    <select
-                        id='prioridad'
-                        className='block w-full rounded-md border border-gray-300 py-1 px-2 text-gray-500 mb-5'
-                    >
-                        <option value="">--- Seleccionar ---</option>
-                        <option value="gato">Gato</option>
-                        <option value="perro">Perro</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
 
-                {/* Fecha de nacimiento */}
-                <div>
-                    <label className="mb-2 block text-sm font-semibold">Fecha de nacimiento</label>
-                    <input
-                        type="date"
-                        className="block w-full rounded-md border border-gray-300 py-1 px-2 text-gray-500 mb-5"
-                    />
-                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {/* Campo tipo de mascota */}
+                    <div>
+                        <label htmlFor="tipo" className="mb-2 block text-sm font-semibold">Tipo</label>
+                        <select
+                            id="tipo"
+                            className="block w-full rounded-md border border-gray-300 py-2 px-3 text-gray-700"
+                            defaultValue=""
+                        >
+                            <option value="">--- Seleccionar ---</option>
+                            <option value="gato">Gato</option>
+                            <option value="perro">Perro</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
 
-                {/* Síntomas */}
+
+                    {/* Campo fecha de nacimiento */}
+                    <div>
+                        <label htmlFor="fechaNacimiento" className="mb-2 block text-sm font-semibold">Fecha de nacimiento</label>
+                        <input
+                            id="fechaNacimiento"
+                            type="date"
+                            className="block w-full rounded-md border border-gray-300 py-2 px-3 text-gray-700"
+                        />
+                    </div>
+                </div>
+				
+
+                {/* Campo observación*/}
                 <div>
-                    <label className="mb-2 block text-sm font-semibold">Síntoma u observación</label>
+                    <label className="mb-2 block text-sm font-semibold">Observación</label>
                     <textarea
                         placeholder="Ingresa el síntoma u observación de forma general"
                         className="block w-full rounded-md border border-gray-300 py-1 px-2 text-gray-500 mb-5"
                     />
                 </div>
+
             </fieldset>
 
-            {/* Botón de submit */}
+
+            {/* Botón de registro */}
             <input
                 type="submit"
                 className="bg-gray-800 w-full p-2 mt-5 text-slate-300 uppercase font-bold rounded-lg 
                 hover:bg-gray-600 cursor-pointer transition-all"
                 value="Registrar"
             />
+
         </form>
 
     )
